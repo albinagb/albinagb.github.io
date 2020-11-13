@@ -1,0 +1,65 @@
+/* About Page */
+
+body {
+}
+
+h1 {
+  margin: 0 10rem;
+  text-align: center;
+}
+
+em {
+  font-weight: bold;
+}
+
+div {
+  padding: 1em 3em 5em;
+}
+
+/* Flex Parent */
+ul {
+  list-style-type: none;
+  margin: 0;
+  /* text-align: center; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+/* Flex Child */
+
+li {
+  border: 3px solid green;
+  flex-basis: 10%;
+  padding: 0.1rem;
+}
+
+.floatleft {
+  float: left;
+  /* margin TRBL: top right bottom left*/
+  margin: 0 0.7rem 0.7rem 0.7rem;
+}
+
+div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+article {
+  width: 25rem;
+  border: 3px solid green;
+  /* margin 0 will alligh the text to the center of the page. It will be centered on any other device*/
+  margin: 0 auto;
+}
+
+.floatright {
+  float: right;
+}
+
+/* border box model */
+article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
