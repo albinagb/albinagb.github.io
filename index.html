@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Currency Exchange</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -17,30 +14,31 @@
     />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="leftheader">
-          <a href="/"
-            ><img src="img/cat.png" alt="Alba's Blog. Click for home. "
-          /></a>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Albina G</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-        <div class="rightheader">
-          <h1>Albina G</h1>
-          <p>My So-Called Web-Dev Life</p>
-        </div>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="https://goop.com" target="_blank">Goop</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="./about.html" target="_blank">About</a></li>
-          <li><a href="./form.html" target="_blank">Contact</a></li>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contacts" class="navbar__links" id="contacts-page"
+              >Contacts</a
+            >
+          </li>
         </ul>
-      </nav>
+      </div>
+    </nav>
 
-      <div class="element">
+    <!-- <div class="element">
         <i class="fas fa-yen-sign"></i>
       </div>
       <div class="element">
@@ -63,69 +61,41 @@
       </div>
       <div class="element">
         <i class="fas fa-won-sign"></i>
-      </div>
-      <div class="mainDiv">
-        <div class="container">
-          <h2>Currency Converter</h2>
-          <p>Live Market Rates as of today,<br /><span id="time"></span></p>
+      </div> -->
+    <div class="mainDiv">
+      <div class="container">
+        <h2>Currency Converter</h2>
+        <p>Live Market Rates as of today,<br /><span id="time"></span></p>
 
-          <div class="currency">
-            <select id="currency-one"></select>
-            <input type="number" id="amount-one" placeholder="0" value="1" />
-          </div>
+        <div class="currency">
+          <select id="currency-one"></select>
+          <input type="number" id="amount-one" placeholder="0" value="1" />
+        </div>
 
-          <div class="swap-rate-container">
-            <div id="swap">
-              <i class="fas fa-exchange-alt"></i>
-            </div>
-            <div class="rate" id="rate"></div>
+        <div class="swap-rate-container">
+          <div id="swap">
+            <i class="fas fa-exchange-alt"></i>
           </div>
+          <div class="rate" id="rate"></div>
+        </div>
 
-          <div class="currency">
-            <select id="currency-two"></select>
-            <input type="number" id="amount-two" placeholder="0" />
-          </div>
+        <div class="currency">
+          <select id="currency-two"></select>
+          <input type="number" id="amount-two" placeholder="0" />
         </div>
       </div>
-
-      <section>
-        <article>
-          <img src="img/monstera.jpg" alt="Earth-Vision Reality TV. " />
-          <h2>Why I still Watch Earth-Vision Reality TV</h2>
-          <p class="posted">Posted October 15, 2018</p>
-          <p>
-            Lots of my Alien friends have moved on from Earth-Vision Reality TV.
-            I hear the same complaints all the time - its too repetitive, there
-            aren’t enough abductions, our plants in high level governments are
-            too obvious. Blah-blah-blah. You know what I say? They are just
-            setting the stage for the next big chapter, and I can’t wait...
-            <a href="blog1.html">Read more >> </a>
-          </p>
-        </article>
-        <article>
-          <img src="img/monstera.jpg" alt="Proper UFO Maintenance. " />
-          <h2>Proper UFO Maintenance</h2>
-          <p class="posted">Posted October 5, 2018</p>
-          <p>
-            Flying around the galaxy is all well and good, but if you’ve ever
-            found yourself stranded in the middle of an anti-matter cloud for a
-            few millennia, you’ll start wishing you had cared better for your
-            UFO. Here are my top tricks to keep yourself at light speed.
-            <a href="blog2.html">Read more >> </a>
-          </p>
-        </article>
-      </section>
-
-      <footer>
-        <p>Legal disclaimer, copyright, etc.</p>
-        <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-etsy"></i></a>
-        </div>
-      </footer>
     </div>
+
+    <footer>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-etsy"></i></a>
+
+        <p>Legal disclaimer, copyright, etc.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

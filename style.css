@@ -1,28 +1,12 @@
 :root {
-  --brown-050: #92817a;
-
-  --green-010: #e3f1df;
-  --green-050: #bbe5b3;
-  --green-100: #50b83c;
-  --green-200: #108043;
-  --green-300: #173630;
-
-  --grey-050: #f9fafb;
-  --grey-100: #f4f6f8;
-  --grey-200: #dfe3e8;
-  --grey-300: #c4cdd5;
-  --grey-400: #919eab;
-  --grey-500: #637381;
-  --grey-600: #454f5b;
-  --grey-700: #212b36;
-  --grey-800: #1f2933;
+  /* colors */
 }
 
 html {
   box-sizing: border-box;
   font-size: 150%;
   font-weight: 300;
-  font-family: "Sen", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   line-height: 1.4;
 }
 
@@ -33,125 +17,91 @@ html {
 }
 
 body {
-  background-image: linear-gradient(90deg, #bfcdd9, #acd9e4);
+  background-image: linear-gradient(180deg, #f2c744, #d3d9bf);
   /* height: 100vh; */
 }
 
 .mainDiv {
   display: flex;
   flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 25px 0 rgba(7, 36, 6, 0.3);
   border-radius: 0.5em;
-  background-color: #63a9df;
+  background-color: #a0bf30;
+  color: #0a4012;
   overflow: hidden;
   padding: 1rem 1.5rem;
-  margin: auto;
+  margin: 2rem auto;
   text-align: center;
 }
 
 .container h2 {
-  color: var(--grey-800);
   font-size: 1.7rem;
   margin: 0.9rem;
 }
 
 .container p {
-  color: var(--grey-700);
   text-align: center;
   font-size: 1rem;
   margin: 0;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
-
-header {
+.navbar {
+  height: 3rem;
   display: flex;
-  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
   justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
-.leftheader {
-  flex-basis: 40%;
-  padding-right: 0.5rem;
-  text-align: right;
-  padding-left: 0.5rem;
-}
-
-.rightheader {
-  flex-basis: 60%;
-  margin-top: 3.75rem;
-  color: #2b2a29;
-}
-
-.rightheader h1 {
-  margin: 0;
-  /* border: 3px solid red; */
-}
-
-.rightheader p {
-  margin-top: -0.5rem;
-  text-align: left;
-  /* border: 3px solid green; */
-}
-
-nav {
-  border-bottom: 1px solid #4cb1f7;
-  border-top: 1px solid #637381;
-}
-
-nav ul {
-  /* this way we turned off the bulets => */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-nav li {
-  display: inline-block;
-  text-align: center;
-  width: 7rem;
-}
-
-nav a {
-  /* " display: block;" will add color to all the li button */
-  display: block;
-  font-size: 1rem;
-  color: white;
-  font-weight: bold;
+#navbar__logo {
+  color: #f27405;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   text-decoration: none;
-  /* so if we make display: block then we can add "padding" to an anchortag */
-  padding: 0.1rem 1rem;
-  /* border: 1px solid red; */
+  font-size: 1.7rem;
 }
 
-nav a:hover {
-  background-color: white;
-  color: black;
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 
-article {
-  margin: 2rem 0;
-  font-size: 0.75rem;
+.navbar__item {
+  height: 80px;
 }
 
-article img {
-  /* put  */
-  float: left;
-  margin: 0 1rem 1rem 0;
-  border-radius: 0.1rem;
-}
-
-article:after {
-  content: "";
-  display: table;
-  clear: both;
+.navbar__links {
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.3s ease;
 }
 
 .element {
@@ -177,17 +127,18 @@ article:after {
 /* ---------------------------------------------------------------- */
 
 .fa-exchange-alt {
-  color: var(--grey-900);
+  color: #242621;
   cursor: pointer;
   font-size: 1.4rem;
   padding: 0.2rem 0.6rem;
 }
 
 .fa-exchange-alt:hover {
-  color: var(--green-200);
+  color: #f0f2bd;
 }
 
 .currency {
+  color: #0a4012;
   padding: 1rem 0;
   display: flex;
   align-items: center;
@@ -231,7 +182,6 @@ article:after {
 }
 
 .rate {
-  color: var(--grey-800);
   font-size: 0.8rem;
   padding: 0 10px;
 }
@@ -247,15 +197,9 @@ input:focus {
   outline: 0;
 }
 
-section {
-  border-bottom: 1px solid white;
-  margin-bottom: 0.3rem;
-}
-
 footer {
   text-align: center;
   font-size: 00.8rem;
-  border-top: 1px solid #637381;
   padding-top: 0.5rem;
 }
 
@@ -269,7 +213,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #212b36;
+  color: #0a4012;
 }
 
 footer p {
