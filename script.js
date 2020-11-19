@@ -11,6 +11,47 @@ let exchEl = document.querySelector(".fa-exchange-alt");
 
 let arr = [];
 
+// ["$", "€", "£", "₽", "₪", "¥", "₹", "₩", "฿"];
+
+let elemPlayers = [];
+
+function playMe() {
+  let currenciesEl = document.querySelectorAll(".icon_elem");
+
+  for (var i = 0, len = currenciesEl.length; i < len; ++i) {
+    let elem = currenciesEl[i];
+    let scale = Math.random() * 0.7 + 0.3;
+
+    let player = elem.animate(
+      [
+        {
+          transform: `translate3d(${
+            (i / len) * 100
+          }vw,-5vh,0) scale(${scale}) rotate(0turn)`,
+          opacity: scale,
+        },
+        {
+          transform: `translate3d(${
+            (i / len) * 100 + 10
+          }vw,105vh,0) scale(${scale}) rotate(${
+            Math.random() > 0.5 ? "" : "-"
+          }2turn)`,
+          opacity: 1,
+        },
+      ],
+      {
+        duration: Math.random() * 3000 + 5000,
+        iterations: 1,
+        delay: -(Math.random() * 7000),
+      }
+    );
+
+    elemPlayers.push(player);
+  }
+}
+
+playMe();
+
 // Create selections
 function makeSelections(selections_arr, currency_el) {
   selections_arr.forEach((el) => {
@@ -31,7 +72,6 @@ function calculate() {
     .then((res) => res.json())
     .then((data) => {
       arr = Object.keys(data.rates);
-      console.log(Object.entries(data));
 
       makeSelections(arr, currencyEl_one);
       makeSelections(arr, currencyEl_two);
@@ -109,3 +149,48 @@ setInterval(clock, 1000);
 // }
 
 // getData();
+
+// Animations
+
+// function sleep(ms) {
+//   return new Promise((resolve) => setTimeout(resolve, ms));
+// }
+
+// // ["$", "€", "£", "₽", "₪", "¥", "₹", "₩", "฿"];
+
+// async function playMe() {
+//   iter = 0;
+//   while (iter < 10) {
+//     iter = iter + 1;
+//     console.log("new");
+
+//     currenciesEl.forEach((el) => {
+//       delay_num = Math.random() * 10000;
+//       duration_num = Math.random() * 10000;
+//       el.animate(
+//         [
+//           // keyframes
+//           {
+//             transform: "translateY(-5rem) translateX(2rem)",
+//             color: "rgb(174, 207, 52)",
+//           },
+//           { color: "rgb(11, 71, 19)", offset: 0.3 },
+//           {
+//             transform: "translateY(34rem) translateX(5rem)",
+//             color: "rgb(182, 189, 157)",
+//           },
+//         ],
+//         {
+//           // timing options
+//           delay: delay_num,
+//           duration: 5000 + duration_num,
+//           easing: "ease-in-out",
+//           iterations: 1,
+//         }
+//       );
+//     });
+//     await sleep(20000);
+//   }
+// }
+
+// playMe();
