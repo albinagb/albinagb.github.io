@@ -34,7 +34,7 @@
             <a href="#about" class="navbar__links" id="about-page">About</a>
           </li>
           <li class="navbar__item">
-            <a href="projects.html" class="navbar__links" id="projects-page"
+            <a href="#projects" class="navbar__links" id="projects-page"
               >Projects</a
             >
           </li>
@@ -46,25 +46,44 @@
         </ul>
       </div>
     </nav>
-
-    <div class="body">
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-        tempore aut suscipit, rem fuga earum. Illo ullam, iste voluptates ex
-        pariatur dolorem voluptatem dolore, sunt voluptatum excepturi eaque
-        aliquid minima quod doloribus assumenda praesentium quis dolores aliquam
-        perferendis molestiae delectus eos earum? Vero, nulla ullam quisquam
-        fuga a beatae incidunt saepe non consectetur veniam obcaecati maiores.
-        Necessitatibus velit dolorem possimus harum id est accusamus facilis.
-        Autem iure numquam laboriosam blanditiis natus possimus molestiae
-        aperiam officia et harum temporibus amet tempore, nemo quibusdam
-        excepturi recusandae, doloribus voluptas porro voluptate earum sint?
-      </p>
+    <div id="elem_div">
+      <div class="icon_elem" id="mar_1">$</div>
+      <div class="icon_elem" id="mar_2">€</div>
+      <div class="icon_elem" id="mar_3">£</div>
+      <!-- <div class="icon_elem" id="mar_4">₽</div> -->
+      <!-- <div class="icon_elem" id="mar_5">₪</div> -->
+      <div class="icon_elem" id="mar_6">¥</div>
+      <!-- <div class="icon_elem" id="mar_7">₹</div> -->
+      <!-- <div class="icon_elem" id="mar_8">₩</div> -->
     </div>
 
-    <div class="animation"></div>
+    <div class="body">
+      <div class="mainDiv">
+        <div class="container">
+          <h2>Currency Converter</h2>
+          <p>Live Market Rates as of today,<br /><span id="time"></span></p>
 
-    <footer class="footer">
+          <div class="currency">
+            <select id="currency-one"></select>
+            <input type="number" id="amount-one" placeholder="0" value="1" />
+          </div>
+
+          <div class="swap-rate-container">
+            <div id="swap">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="rate" id="rate"></div>
+          </div>
+
+          <div class="currency">
+            <select id="currency-two"></select>
+            <input type="number" id="amount-two" placeholder="0" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
       <div class="social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -76,5 +95,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
   </body>
 </html>

@@ -11,48 +11,8 @@ let exchEl = document.querySelector(".fa-exchange-alt");
 
 let arr = [];
 
-// ["$", "€", "£", "₽", "₪", "¥", "₹", "₩", "฿"];
-
-let elemPlayers = [];
-
-function playMe() {
-  let currenciesEl = document.querySelectorAll(".icon_elem");
-
-  for (var i = 0, len = currenciesEl.length; i < len; ++i) {
-    let elem = currenciesEl[i];
-    let scale = Math.random() * 0.7 + 0.3;
-
-    let player = elem.animate(
-      [
-        {
-          transform: `translate3d(${
-            (i / len) * 100
-          }vw,-5vh,0) scale(${scale}) rotate(0turn)`,
-          opacity: scale,
-        },
-        {
-          transform: `translate3d(${
-            (i / len) * 100 + 10
-          }vw,105vh,0) scale(${scale}) rotate(${
-            Math.random() > 0.5 ? "" : "-"
-          }2turn)`,
-          opacity: 1,
-        },
-      ],
-      {
-        duration: Math.random() * 3000 + 5000,
-        iterations: 1,
-        delay: -(Math.random() * 7000),
-      }
-    );
-
-    elemPlayers.push(player);
-  }
-}
-
-playMe();
-
 // Create selections
+
 function makeSelections(selections_arr, currency_el) {
   selections_arr.forEach((el) => {
     const option = document.createElement("option");
@@ -62,7 +22,7 @@ function makeSelections(selections_arr, currency_el) {
   });
 }
 
-// Read fetched exchange rates and update the DOM
+// Calculate func. 1. Fetch currency rates into an array 2. Calculate the rates
 
 function calculate() {
   let currency_one;
@@ -93,7 +53,7 @@ function calculate() {
       const rate = data.rates[currency_two];
       // console.log(data.rates);
 
-      rateEl.innerText = `1${currency_one} = ${rate} ${currency_two}`;
+      rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
       amountEl_one.value = parseFloat(amountEl_one.value);
     })
