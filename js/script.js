@@ -6,8 +6,7 @@ const amountEl_two = document.getElementById("amount-two");
 const rateEl = document.getElementById("rate");
 const swap = document.getElementById("swap");
 
-let clockEl = document.querySelector("#time");
-let exchEl = document.querySelector(".fa-exchange-alt");
+let exchEl = document.querySelector(".ex-ch");
 
 let arr = [];
 
@@ -22,7 +21,7 @@ function makeSelections(selections_arr, currency_el) {
   });
 }
 
-// Calculate func. 1. Fetch currency rates into an array 2. Calculate the rates
+// Calculate func: 1. Fetch currency rates into an array 2. Calculate the rates
 
 function calculate() {
   let currency_one;
@@ -36,12 +35,9 @@ function calculate() {
       makeSelections(arr, currencyEl_one);
       makeSelections(arr, currencyEl_two);
 
+      // currencyEl_two.value = arr[16];
       currency_one = currencyEl_one.value;
       currency_two = currencyEl_two.value;
-
-      // let inputValue = currencyEl_two.value;
-      // inputValue = arr[16];
-      // console.log(inputValue);
 
       return fetch(
         `https://api.exchangerate-api.com/v4/latest/${currency_one}`
@@ -51,7 +47,6 @@ function calculate() {
     .then((data) => {
       // console.log(Object.entries(data.rates));
       const rate = data.rates[currency_two];
-      // console.log(data.rates);
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
@@ -74,9 +69,6 @@ swap.addEventListener("click", () => {
   currencyEl_one.value = currencyEl_two.value;
   currencyEl_two.value = temp;
 
-  // const tempAmount = amountEl_one.value;
-  // amountEl_one.value = amountEl_two.value;
-  // amountEl_two.value = tempAmount;
   exchEl.classList.toggle("rotate");
   calculate();
 });
@@ -85,6 +77,8 @@ calculate();
 
 // Time function
 function clock() {
+  let clockEl = document.querySelector("#time");
+
   let options = {
     year: "numeric",
     month: "long",
@@ -97,60 +91,3 @@ function clock() {
 }
 
 setInterval(clock, 1000);
-
-// ---------------------------------------------------------------
-
-// async function getData() {
-//   const response = await fetch("https://cat-fact.herokuapp.com");
-//   const data = await response.text();
-//   console.log("start");
-//   console.log(data);
-//   console.log("finish");
-// }
-
-// getData();
-
-// Animations
-
-// function sleep(ms) {
-//   return new Promise((resolve) => setTimeout(resolve, ms));
-// }
-
-// // ["$", "€", "£", "₽", "₪", "¥", "₹", "₩", "฿"];
-
-// async function playMe() {
-//   iter = 0;
-//   while (iter < 10) {
-//     iter = iter + 1;
-//     console.log("new");
-
-//     currenciesEl.forEach((el) => {
-//       delay_num = Math.random() * 10000;
-//       duration_num = Math.random() * 10000;
-//       el.animate(
-//         [
-//           // keyframes
-//           {
-//             transform: "translateY(-5rem) translateX(2rem)",
-//             color: "rgb(174, 207, 52)",
-//           },
-//           { color: "rgb(11, 71, 19)", offset: 0.3 },
-//           {
-//             transform: "translateY(34rem) translateX(5rem)",
-//             color: "rgb(182, 189, 157)",
-//           },
-//         ],
-//         {
-//           // timing options
-//           delay: delay_num,
-//           duration: 5000 + duration_num,
-//           easing: "ease-in-out",
-//           iterations: 1,
-//         }
-//       );
-//     });
-//     await sleep(20000);
-//   }
-// }
-
-// playMe();

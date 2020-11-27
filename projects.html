@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Currency Exchange</title>
 
     <link
@@ -19,80 +19,88 @@
     />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar__container">
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="./index.html" class="navbar__links" id="home-page">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#projects" class="navbar__links" id="projects-page"
-              >Projects</a
-            >
-          </li>
-          <li class="navbar__item">
-            <a href="#contacts" class="navbar__links" id="contacts-page"
-              >Contacts</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div id="elem_div">
-      <div class="icon_elem" id="mar_1">$</div>
-      <div class="icon_elem" id="mar_2">€</div>
-      <div class="icon_elem" id="mar_3">£</div>
-      <!-- <div class="icon_elem" id="mar_4">₽</div> -->
-      <!-- <div class="icon_elem" id="mar_5">₪</div> -->
-      <div class="icon_elem" id="mar_6">¥</div>
-      <!-- <div class="icon_elem" id="mar_7">₹</div> -->
-      <!-- <div class="icon_elem" id="mar_8">₩</div> -->
-    </div>
-
-    <div class="body">
-      <div class="mainDiv">
-        <div class="container">
-          <h2>Currency Converter</h2>
-          <p>Live Market Rates as of today,<br /><span id="time"></span></p>
-
-          <div class="currency">
-            <select id="currency-one"></select>
-            <input type="number" id="amount-one" placeholder="0" value="1" />
-          </div>
-
-          <div class="swap-rate-container">
-            <div id="swap">
-              <i class="fas fa-exchange-alt"></i>
+    <div class="wrapper">
+      <header class="header">
+        <!-- will need to fix navbar -->
+        <nav class="navbar">
+          <div class="navbar__container">
+            <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
-            <div class="rate" id="rate"></div>
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="./index.html" class="navbar__links" id="home-page"
+                  >Home</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__links" id="about-page">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#projects" class="navbar__links" id="projects-page"
+                  >Projects</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a href="#contacts" class="navbar__links" id="contacts-page"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
           </div>
+        </nav>
+      </header>
+      <div class="main">
+        <div class="icon_elem" id="cur_elem1">$</div>
+        <div class="icon_elem" id="cur_elem2">€</div>
+        <div class="icon_elem" id="cur_elem3">£</div>
+        <div class="icon_elem" id="cur_elem4">¥</div>
 
-          <div class="currency">
-            <select id="currency-two"></select>
-            <input type="number" id="amount-two" placeholder="0" />
+        <div class="body">
+          <div class="mainDiv">
+            <div class="container">
+              <h2>Currency Converter</h2>
+              <p>Live Market Rates as of today,<br /><span id="time"></span></p>
+
+              <div class="currency">
+                <select id="currency-one"></select>
+                <input
+                  type="number"
+                  id="amount-one"
+                  placeholder="0"
+                  value="1"
+                />
+              </div>
+
+              <div class="swap-rate-container">
+                <div id="swap">
+                  <i class="fas ex-ch fa-sync-alt"></i>
+                </div>
+                <div class="rate" id="rate"></div>
+              </div>
+
+              <div class="currency">
+                <select id="currency-two"></select>
+                <input type="number" id="amount-two" placeholder="0" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <footer>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-etsy"></i></a>
+
+          <p>AG© 2020</p>
+        </div>
+      </footer>
     </div>
-
-    <footer>
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-etsy"></i></a>
-
-        <p>AG© 2020</p>
-      </div>
-    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/projects.js"></script>
