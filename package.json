@@ -1,0 +1,27 @@
+{
+  "name": "albinagb.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albinagb/albinagb.github.io.git"
+  },
+  "keywords": [
+    "ag",
+    "agweb"
+  ],
+  "author": "Alba G",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albinagb/albinagb.github.io/issues"
+  },
+  "homepage": "https://github.com/albinagb/albinagb.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6"
+  }
+}

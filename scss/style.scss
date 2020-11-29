@@ -1,21 +1,7 @@
-$darkgreen: rgb(11, 71, 19);
-$lightgreen: rgb(174, 207, 52);
-$cream: rgb(238, 240, 176);
-$milk: hsla(46, 50, 89, 1);
-$lightmilk: hsla(0, 0, 94, 1);
-$green: rgb(3, 140, 101);
-$greenishgrey: rgb(182, 189, 157);
-$earthorange: hsla(45, 87, 60, 1);
-$brightorange: #f17304;
-$brown: hsla(22, 37, 39, 1);
+@use 'variables' as var1;
+@use 'mixins';
 
-$text-color: $darkgreen;
-$color-main: $lightgreen;
-$color-headlines: $green;
-
-$font-main: "Kumbh Sans", Helvetica, sans-serif;
-$font-highlight: Helvetica, sans-serif;
-
+//    main CSS
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,9 +20,10 @@ html {
 
 body {
   background: linear-gradient(#e2b9a8, #f4c578, #fcc164, #f1c275, #f7b285);
-  font-family: $font-main;
+  font-family: var1.$font-main;
   padding: 0 0.3rem;
   overflow-x: hidden;
+  // background-size: cover;
 }
 
 .wrapper {
@@ -66,17 +53,14 @@ body {
 .navbar {
   height: 3rem;
   font-family: "Monoton", cursive;
-  display: flex;
-  justify-content: center;
+  float: right;
   align-items: center;
+  margin-right: 0;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
-  z-index: 999;
 
   .navbar__menu {
     display: flex;
-    align-items: center;
     flex-flow: row wrap;
     list-style: none;
     margin: 0;
@@ -86,7 +70,6 @@ body {
       font-weight: 300;
       display: flex;
       margin-right: 1rem;
-      justify-content: right;
       text-decoration: none;
       height: 100%;
       transition: all 0.3s ease;
@@ -140,7 +123,7 @@ body {
     box-shadow: 0 0 25px 0 rgba(7, 36, 6, 0.3);
     border-radius: 0.5em;
     background-color: rgba(160, 191, 48, 0.9);
-    color: $darkgreen;
+    color: var1.$darkgreen;
     overflow: hidden;
     padding: 1rem 1.5rem;
     margin: 2rem auto;
@@ -167,7 +150,7 @@ body {
     }
 
     .ex-ch:hover {
-      color: $milk;
+      color: var1.$milk;
       transform: scale(1.1);
     }
     .currency {
@@ -178,14 +161,14 @@ body {
     }
     .currency select {
       padding: 0.3rem 0.7rem;
-      color: $darkgreen;
+      color: var1.$darkgreen;
       -moz-appearance: none;
       -webkit-appearance: none;
       appearance: none;
       border: none;
       font-size: 1.1rem;
       background: transparent;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      // background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
       background-position: right 10px top 50%, 0, 0;
       background-size: 12px auto, 100%;
       background-repeat: no-repeat;
@@ -228,7 +211,7 @@ body {
 // Footer
 
 footer {
-  background: $lightgreen;
+  background: var1.$lightgreen;
   padding: 2rem 0 0 0;
   margin: 0;
   text-align: center;
