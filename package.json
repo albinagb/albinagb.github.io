@@ -4,7 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "sass": ""
+    "": ""
   },
   "repository": {
     "type": "git",

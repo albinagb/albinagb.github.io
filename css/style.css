@@ -1,70 +1,99 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-* *:before,
-* *:after {
-  box-sizing: inherit;
+:root {
+  /* Need to add colors 'background: var(--brandColor)*/
+  --dirtyOrange: hsla(16, 68, 52, 1);
+  --brightCoral: hsla(11, 88, 56, 1);
+  --purpleBrown: hsla(10, 67%, 18%, 1);
+  --calmPink: hsla(11, 77, 77, 1);
+  --brightBlack: hsla(0, 0, 5, 1);
 }
 
-html {
+/* Same Colors in Hex */
+
+.dirty-orange-hex {
+  color: #d95e32;
+}
+.bright-coral-hex {
+  color: #f25430;
+}
+.purple-brown-hex {
+  color: #592115;
+}
+.calm-pink-hex {
+  color: #f2a999;
+}
+.bright-black-hex {
+  color: #0d0d0d;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-size: 150%;
-  font-weight: 300;
 }
 
 body {
-  background: linear-gradient(#e2b9a8, #f4c578, #fcc164, #f1c275, #f7b285);
-  font-family: "Kumbh Sans", Helvetica, sans-serif;
-  padding: 0 0.3rem;
-  overflow-x: hidden;
-}
-
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-}
-.wrapper .header {
-  /* background: tomato; */
-}
-.wrapper .main {
-  text-align: center;
-  /* background: deepskyblue; */
   min-height: 100vh;
 }
 
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 150%;
+  font-weight: 300;
+  background: linear-gradient(#e2b9a8, #f4c578, #fcc164, #f1c275, #f7b285)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: "Avenir", "Helvetica", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  background-clip: inherit;
 }
 
-.navbar {
+.wrapper {
+  /* use background-image instead of just "background" */
+}
+
+/* Home Elements */
+
+.lines {
+  margin: 1.7rem 0 0rem 7rem;
+}
+
+/*    Menu - Navbar    */
+
+#navbar__menu {
+  margin: 1.5rem 0 0rem 26rem;
   height: 3rem;
-  font-family: "Monoton", cursive;
-  float: right;
-  align-items: center;
-  margin-right: 0;
   font-size: 1.2rem;
-  top: 0;
+  text-transform: uppercase;
+  position: absolute;
+  transform: rotate(-26deg);
 }
-.navbar .navbar__menu {
-  display: flex;
-  flex-flow: row wrap;
-  list-style: none;
-  margin: 0;
-}
-.navbar .navbar__menu .navbar__links {
-  color: #fff;
-  font-weight: 300;
-  display: flex;
-  margin-right: 1rem;
-  text-decoration: none;
-  height: 100%;
+
+#navbar__menu > li {
+  padding: 0 0.5rem;
+  list-style-type: none;
+  color: var(--purpleBrown);
+  font-weight: 500;
   transition: all 0.3s ease;
 }
+
+#navbar__menu li a:visited {
+  color: var(--purpleBrown);
+}
+
+.navbar__links {
+  text-decoration: none;
+}
+
+/* Currency Calculator */
+
+/*    Currency Elements    */
 
 .icon_elem {
   display: flex;
@@ -75,30 +104,29 @@ body {
   border-radius: 50%;
   width: 19rem;
   height: 19rem;
-  position: absolute;
   font-weight: 400;
   color: white;
+  position: absolute;
 }
 
 #cur_elem1 {
-  margin: -4rem 0 0 5rem;
+  margin: -6rem 0 0 0rem;
 }
 
 #cur_elem2 {
-  margin: 0rem 0 0 25rem;
+  margin: -3rem 0 0 25rem;
 }
 
 #cur_elem3 {
-  margin: 26rem 0 0 25rem;
+  margin: 8rem 0 0 38rem;
 }
 
 #cur_elem4 {
-  margin: 26rem 0 0 5rem;
+  margin: 9rem 0 0 10rem;
 }
 
 .mainDiv {
   display: flex;
-  font-family: "Montserrat", sans-serif;
   flex-flow: column wrap;
   align-items: center;
   margin: 0;
@@ -149,6 +177,7 @@ body {
   border: none;
   font-size: 1.1rem;
   background: transparent;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-position: right 10px top 50%, 0, 0;
   background-size: 12px auto, 100%;
   background-repeat: no-repeat;
@@ -175,8 +204,8 @@ body {
   font-size: 0.9rem;
   padding: 0 10px;
 }
-.mainDiv .container input#amount-two[type=number]::-webkit-inner-spin-button,
-.mainDiv .container input#amount-two[type=number]::-webkit-outer-spin-button {
+.mainDiv .container input#amount-two[type="number"]::-webkit-inner-spin-button,
+.mainDiv .container input#amount-two[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -185,10 +214,43 @@ body {
   outline: 0;
 }
 
+/* About Section */
+
+/* Will need to delete this code in all HTMLs => */
+/* #height__container {
+  height: 53vmin;
+} */
+
+/* ------------------ */
+.aboutli {
+  list-style-type: none;
+}
+
+.aboutli:first-child,
+.aboutli:last-child {
+  color: red;
+}
+
+.aboutli:nth-child(3) {
+  background-color: yellow;
+}
+
+h1:first-of-type::first-letter {
+  position: relative;
+  top: 0.5rem;
+  float: left;
+  font-size: 6rem;
+  line-height: 1;
+  color: hsl(205, 87%, 50%);
+  padding: 0 0.25rem 0.12rem 0;
+  font-weight: bold;
+}
+
+/* Footer */
+
 footer {
-  background: #aecf34;
   padding: 2rem 0 0 0;
-  margin: 0;
+  margin-bottom: 1.7rem;
   text-align: center;
   font-size: 0.8rem;
 }
@@ -210,5 +272,3 @@ footer p {
   font-size: 0.6rem;
   color: white;
 }
-
-/*# sourceMappingURL=style.css.map */
