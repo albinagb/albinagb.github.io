@@ -61,13 +61,15 @@ html {
 /* Home Elements */
 
 .lines {
-  margin: 1.7rem 0 0rem 7rem;
+  margin: 0rem 0 0rem 7rem;
+  transform: rotate(-26deg);
+  position: relative;
 }
 
 /*    Menu - Navbar    */
 
 #navbar__menu {
-  margin: 1.5rem 0 0rem 26rem;
+  margin: 7rem 0 0rem 30rem;
   height: 3rem;
   font-size: 1.2rem;
   text-transform: uppercase;
