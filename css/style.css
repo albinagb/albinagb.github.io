@@ -19,7 +19,7 @@
   color: #592115;
 }
 .calm-pink-hex {
-  color: #f2a999;
+  color: #eca595;
 }
 .bright-black-hex {
   color: #0d0d0d;
@@ -58,23 +58,67 @@ html {
   /* use background-image instead of just "background" */
 }
 
+#abstract__human {
+  /* background-color: yellow; */
+  position: absolute;
+  margin: 2.8rem 0 0 45rem;
+}
+
+#myName {
+  color: var(--purpleBrown);
+  writing-mode: vertical-rl;
+  font-size: 1.3rem;
+  margin: 0 0 0 16.5rem;
+  position: absolute;
+}
+
 /* Home Elements */
 
 .lines {
   margin: 0rem 0 0rem 7rem;
   transform: rotate(-26deg);
-  position: relative;
+  position: absolute;
+  z-index: 1;
+}
+
+#footer__home {
+  font-size: 0.5rem;
+  color: var(--purpleBrown);
+  margin: -3.2rem 0 0 15.7rem;
+  writing-mode: vertical-rl;
+}
+
+/* About Section */
+
+/* Will need to delete this code in all HTMLs => */
+/* #height__container {
+  height: 53vmin;
+} */
+
+/* ------------------ */
+.aboutli {
+  list-style-type: none;
+}
+
+.aboutli:first-child,
+.aboutli:last-child {
+  color: red;
+}
+
+.aboutli:nth-child(3) {
+  background-color: yellow;
 }
 
 /*    Menu - Navbar    */
 
 #navbar__menu {
-  margin: 7rem 0 0rem 30rem;
+  margin: 5rem 0 0rem 30rem;
   height: 3rem;
   font-size: 1.2rem;
   text-transform: uppercase;
   position: absolute;
   transform: rotate(-26deg);
+  z-index: 2;
 }
 
 #navbar__menu > li {
@@ -214,38 +258,6 @@ html {
 .mainDiv .container select:focus,
 .mainDiv .container input:focus {
   outline: 0;
-}
-
-/* About Section */
-
-/* Will need to delete this code in all HTMLs => */
-/* #height__container {
-  height: 53vmin;
-} */
-
-/* ------------------ */
-.aboutli {
-  list-style-type: none;
-}
-
-.aboutli:first-child,
-.aboutli:last-child {
-  color: red;
-}
-
-.aboutli:nth-child(3) {
-  background-color: yellow;
-}
-
-h1:first-of-type::first-letter {
-  position: relative;
-  top: 0.5rem;
-  float: left;
-  font-size: 6rem;
-  line-height: 1;
-  color: hsl(205, 87%, 50%);
-  padding: 0 0.25rem 0.12rem 0;
-  font-weight: bold;
 }
 
 /* Footer */
