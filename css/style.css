@@ -7,24 +7,6 @@
   --brightBlack: hsla(0, 0, 5, 1);
 }
 
-/* Same Colors in Hex */
-
-.dirty-orange-hex {
-  color: #d95e32;
-}
-.bright-coral-hex {
-  color: #f25430;
-}
-.purple-brown-hex {
-  color: #592115;
-}
-.calm-pink-hex {
-  color: #eca595;
-}
-.bright-black-hex {
-  color: #0d0d0d;
-}
-
 *,
 *::before,
 *::after {
@@ -41,7 +23,13 @@ html {
   padding: 0;
   font-size: 150%;
   font-weight: 300;
-  background: linear-gradient(#e2b9a8, #f4c578, #fcc164, #f1c275, #f7b285)
+  background: linear-gradient(
+      #9fc3f5 0%,
+      #a8daf2 18%,
+      #c5dbed 60%,
+      #cbd9ee 80%,
+      #9fc3f5
+    )
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -68,14 +56,14 @@ html {
   color: var(--purpleBrown);
   writing-mode: vertical-rl;
   font-size: 1.3rem;
-  margin: 0 0 0 16.5rem;
+  margin: 0.3rem 0 0 17rem;
   position: absolute;
 }
 
 /* Home Elements */
 
 .lines {
-  margin: 0rem 0 0rem 7rem;
+  margin: 0rem 0 0 4rem;
   transform: rotate(-26deg);
   position: absolute;
   z-index: 1;
@@ -88,14 +76,84 @@ html {
   writing-mode: vertical-rl;
 }
 
+/*    Menu - Navbar    */
+
+#navbar__menu {
+  margin: 11rem 0rem 0rem 27rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+}
+
+#navbar__menu > li {
+  padding: 0 0.5rem;
+  list-style-type: none;
+  color: var(--purpleBrown);
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+}
+
+#navbar__menu li a:visited {
+  color: var(--purpleBrown);
+}
+
+#navbar__menu li a:hover {
+  color: white;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar__links {
+  text-decoration: none;
+}
+
 /* About Section */
 
-/* Will need to delete this code in all HTMLs => */
-/* #height__container {
-  height: 53vmin;
-} */
+#menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 0 0.5rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  /* position: absolute; */
+  z-index: 2;
+}
 
-/* ------------------ */
+#menu > li {
+  padding: 0 0.5rem;
+  list-style-type: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+}
+
+#menu li a:visited {
+  color: white;
+}
+
+#menu li a:hover {
+  color: #3e5a57;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+img {
+  border-radius: 50%;
+  float: left;
+  margin: 0 6rem 0 2rem;
+  shape-outside: circle();
+}
+
+#aboutMe {
+  padding: 1.5rem 0;
+  color: #3e5a57;
+  font-weight: 400;
+}
+
 .aboutli {
   list-style-type: none;
 }
@@ -107,157 +165,6 @@ html {
 
 .aboutli:nth-child(3) {
   background-color: yellow;
-}
-
-/*    Menu - Navbar    */
-
-#navbar__menu {
-  margin: 5rem 0 0rem 30rem;
-  height: 3rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  position: absolute;
-  transform: rotate(-26deg);
-  z-index: 2;
-}
-
-#navbar__menu > li {
-  padding: 0 0.5rem;
-  list-style-type: none;
-  color: var(--purpleBrown);
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-#navbar__menu li a:visited {
-  color: var(--purpleBrown);
-}
-
-.navbar__links {
-  text-decoration: none;
-}
-
-/* Currency Calculator */
-
-/*    Currency Elements    */
-
-.icon_elem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 19rem;
-  background-color: red;
-  border-radius: 50%;
-  width: 19rem;
-  height: 19rem;
-  font-weight: 400;
-  color: white;
-  position: absolute;
-}
-
-#cur_elem1 {
-  margin: -6rem 0 0 0rem;
-}
-
-#cur_elem2 {
-  margin: -3rem 0 0 25rem;
-}
-
-#cur_elem3 {
-  margin: 8rem 0 0 38rem;
-}
-
-#cur_elem4 {
-  margin: 9rem 0 0 10rem;
-}
-
-.mainDiv {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.mainDiv .container {
-  box-shadow: 0 0 25px 0 rgba(7, 36, 6, 0.3);
-  border-radius: 0.5em;
-  background-color: rgba(160, 191, 48, 0.9);
-  color: #0b4713;
-  overflow: hidden;
-  padding: 1rem 1.5rem;
-  margin: 2rem auto;
-  position: absolute;
-}
-.mainDiv .container h2 {
-  text-align: center;
-  font-size: 1.7rem;
-  margin: 0.9rem;
-}
-.mainDiv .container p {
-  text-align: center;
-  font-size: 1rem;
-  margin: 0;
-}
-.mainDiv .container .ex-ch {
-  cursor: pointer;
-  font-size: 1.4rem;
-  padding: 0.2rem 0.6rem;
-  transition: background 0.6s, transform 0.2s ease-in-out;
-}
-.mainDiv .container .ex-ch:hover {
-  color: #f1ead5;
-  transform: scale(1.1);
-}
-.mainDiv .container .currency {
-  padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.mainDiv .container .currency select {
-  padding: 0.3rem 0.7rem;
-  color: #0b4713;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  font-size: 1.1rem;
-  background: transparent;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-  background-position: right 10px top 50%, 0, 0;
-  background-size: 12px auto, 100%;
-  background-repeat: no-repeat;
-}
-.mainDiv .container .currency input {
-  border: 0;
-  background: transparent;
-  font-size: 1.1rem;
-  text-align: right;
-  color: white;
-}
-.mainDiv .container .swap-rate-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.mainDiv .container .ex-ch {
-  transition: all 0.5s ease-out;
-}
-.mainDiv .container .ex-ch.rotate {
-  transform: rotate(180deg);
-}
-.mainDiv .container .rate {
-  font-size: 0.9rem;
-  padding: 0 10px;
-}
-.mainDiv .container input#amount-two[type="number"]::-webkit-inner-spin-button,
-.mainDiv .container input#amount-two[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.mainDiv .container select:focus,
-.mainDiv .container input:focus {
-  outline: 0;
 }
 
 /* Footer */

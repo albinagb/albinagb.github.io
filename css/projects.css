@@ -1,0 +1,233 @@
+:root {
+  /* Need to add colors 'background: var(--brandColor)*/
+  --dirty-orange: rgb(221, 97, 51);
+  --brightCoral: rgb(247, 85, 49);
+  --purpleBrown: rgb(73, 24, 15);
+  --calmPink: rgb(241, 164, 147);
+  --brightBlack: rgb(8, 8, 8);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 150%;
+  font-weight: 300;
+  background: linear-gradient(
+      #e2b9a8 0%,
+      #f4c578 18%,
+      #fcc164 60%,
+      #f1c275 80%,
+      #f7b285
+    )
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: "Avenir", "Helvetica", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  background-clip: inherit;
+}
+
+.wrapper {
+  /* use background-image instead of just "background" */
+}
+
+/*    Menu - Navbar    */
+
+#navbar__menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin: 2rem 0 0 0;
+  height: 3rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: sticky;
+  z-index: 2;
+}
+
+#navbar__menu > li {
+  padding: 0 0.5rem;
+  list-style-type: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+  transition: background 0.6s ease-in-out;
+}
+
+#navbar__menu li a:visited {
+  color: white;
+}
+
+#navbar__menu li a:hover {
+  text-shadow: 1px 1px 2px pink;
+  transform: scale(1.1);
+}
+
+.navbar__links {
+  text-decoration: none;
+}
+
+/* Currency Calculator */
+
+/*    Currency Elements    */
+
+.icon_elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19rem;
+  background-color: #ee5447;
+  border-radius: 50%;
+  width: 19rem;
+  height: 19rem;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+}
+
+#cur_elem1 {
+  margin: -6rem 0 0 0rem;
+}
+
+#cur_elem2 {
+  margin: -3rem 0 0 25rem;
+}
+
+#cur_elem3 {
+  margin: 8rem 0 0 38rem;
+}
+
+#cur_elem4 {
+  margin: 9rem 0 0 10rem;
+}
+
+.mainDiv {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.mainDiv .container {
+  box-shadow: 0 0 25px 0 rgba(7, 36, 6, 0.3);
+  border-radius: 0.5em;
+  background-color: rgba(160, 191, 48, 0.9);
+  color: #0b4713;
+  overflow: hidden;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  position: absolute;
+}
+.mainDiv .container h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 0.9rem;
+}
+.mainDiv .container p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+.mainDiv .container .ex-ch {
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0.2rem 0.6rem;
+  transition: background 0.6s ease-in-out;
+}
+.mainDiv .container .ex-ch:hover {
+  color: #f1ead5;
+  transform: scale(1.1);
+}
+.mainDiv .container .currency {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainDiv .container .currency select {
+  padding: 0.3rem 0.7rem;
+  color: #0b4713;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  font-size: 1.1rem;
+  background: transparent;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-position: right 10px top 50%, 0, 0;
+  background-size: 12px auto, 100%;
+  background-repeat: no-repeat;
+}
+.mainDiv .container .currency input {
+  border: 0;
+  background: transparent;
+  font-size: 1.1rem;
+  text-align: right;
+  color: white;
+}
+.mainDiv .container .swap-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainDiv .container .ex-ch {
+  transition: all 0.5s ease-out;
+}
+.mainDiv .container .ex-ch.rotate {
+  transform: rotate(180deg);
+}
+.mainDiv .container .rate {
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+.mainDiv .container input#amount-two[type="number"]::-webkit-inner-spin-button,
+.mainDiv .container input#amount-two[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.mainDiv .container select:focus,
+.mainDiv .container input:focus {
+  outline: 0;
+}
+
+/* Footer */
+
+footer {
+  padding: 2rem 0 0 0;
+  margin-bottom: 1.7rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+footer a {
+  /* I beleive the following code is optional */
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  /* with the transform anim gives nice smooth button scale anim */
+  transition: background 0.5s ease-in, transform 0.25s ease-in-out;
+}
+footer a:hover {
+  color: #0a4012;
+  transform: scale(1.2);
+}
+footer p {
+  font-size: 0.6rem;
+  color: white;
+}
