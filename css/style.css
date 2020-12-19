@@ -99,6 +99,10 @@ html {
   color: var(--purpleBrown);
 }
 
+#navbar__menu li a:link {
+  color: var(--purpleBrown);
+}
+
 #navbar__menu li a:hover {
   color: white;
   transform: scale(1.2);
