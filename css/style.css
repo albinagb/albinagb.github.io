@@ -102,12 +102,12 @@ html {
   color: var(--purpleBrown);
   font-weight: 500;
   transition: all 0.6s ease-in-out;
+  -webkit-link: yellow;
 }
 
 #navbar__menu li a:visited,
 li a:checked {
   color: var(--purpleBrown);
-  -webkit-link-fill-color: yellow;
 }
 
 #navbar__menu li a:hover {
