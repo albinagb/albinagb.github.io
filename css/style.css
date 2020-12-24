@@ -97,6 +97,7 @@ html {
 }
 
 #navbar__menu > li {
+  -webkit-appearance: none;
   padding: 0 0.5rem;
   list-style-type: none;
   color: var(--purpleBrown);
@@ -107,7 +108,6 @@ html {
 #navbar__menu li a:visited,
 li a:checked {
   color: var(--purpleBrown);
-  -webkit-appearance: none;
 }
 
 #navbar__menu li a:hover {
