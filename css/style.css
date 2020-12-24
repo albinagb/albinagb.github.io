@@ -54,6 +54,18 @@ html {
   position: relative;
 }
 
+.nameHeader {
+  width: 66vw;
+  display: grid;
+  margin: 5rem 0 0 -3rem;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1rem;
+  transform: rotate(-26deg);
+  position: absolute;
+  z-index: 1;
+}
+
 #abstract__human {
   margin: -11.5rem 0 0 38rem;
   /* transform: rotate(26deg); */
@@ -96,12 +108,12 @@ html {
   z-index: 2;
 }
 
-#navbar__menu li {
+#navbar__menu > li {
   -webkit-appearance: none;
-  padding: 0 0.5rem;
   text-decoration: none;
   list-style-type: none;
   color: var(--purpleBrown);
+  padding: 0 0.5rem;
   font-weight: 500;
   transition: all 0.6s ease-in-out;
 }
