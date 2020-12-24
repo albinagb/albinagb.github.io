@@ -42,59 +42,17 @@ html {
   background-clip: inherit;
 }
 
-.wrapper {
-  /* use background-image instead of just "background" */
-}
-
-/*    Menu - Navbar    */
-
-#navbar__menu {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  margin: 2rem 0 0 0;
-  height: 3rem;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  position: sticky;
-  z-index: 2;
-}
-
-#navbar__menu > li {
-  padding: 0 0.5rem;
-  list-style-type: none;
-  color: white;
-  font-weight: 500;
-  transition: all 0.6s ease-in-out;
-  transition: background 0.6s ease-in-out;
-}
-
-#navbar__menu li a:visited {
-  color: white;
-}
-
-#navbar__menu li a:hover {
-  text-shadow: 1px 1px 2px pink;
-  transform: scale(1.1);
-}
-
-.navbar__links {
-  text-decoration: none;
-}
-
-/* Currency Calculator */
-
 /*    Currency Elements    */
 
 .icon_elem {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 19rem;
-  background-color: #ee5447;
+  font-size: 17rem;
+  background-color: rgb(238, 84, 71);
   border-radius: 50%;
-  width: 19rem;
-  height: 19rem;
+  width: 17rem;
+  height: 17rem;
   font-weight: 400;
   color: white;
   position: absolute;
@@ -130,12 +88,12 @@ html {
   color: #0b4713;
   overflow: hidden;
   padding: 1rem 1.5rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   position: absolute;
 }
 .mainDiv .container h2 {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin: 0.9rem;
 }
 .mainDiv .container p {

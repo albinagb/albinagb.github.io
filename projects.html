@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/projects.css" /> -->
+    <style type="text/css">
+      @import url(./css/projects.css);
+    </style>
     <title>Currency Exchange</title>
 
     <link
@@ -20,24 +24,49 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <!-- will need to fix navbar -->
-
-        <ul id="navbar__menu">
-          <li class="navbar__item">
-            <a href="./index.html" class="navbar__links" id="home-page">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="./about.html" class="navbar__links" id="about-page"
-              >About</a
-            >
-          </li>
-          <li class="navbar__item">
-            <a href="./projects.html" class="navbar__links" id="projects-page"
-              >Projects</a
-            >
-          </li>
-        </ul>
+      <header>
+        <nav class="navbar">
+          <input
+            id="menu-toggle"
+            class="inputbox"
+            type="checkbox"
+            aria-label="Open the menu for page links"
+          />
+          <label for="menu-toggle" class="hamburger-container">
+            <span class="hamburger"></span>
+          </label>
+          <ul class="menu">
+            <li class="menu_item">
+              <a
+                href="./index.html"
+                class="menu_link"
+                aria-label="Visit the home page"
+                >Home</a
+              >
+            </li>
+            <li class="menu_item">
+              <a
+                href="./projects.html"
+                class="menu_link"
+                aria-label="Visit the about page"
+                >Project #1</a
+              >
+            </li>
+            <li class="menu_item">
+              <a
+                href="./about.html"
+                class="menu_link"
+                aria-label="Visit the services page"
+                >Project #2</a
+              >
+            </li>
+            <li class="menu_item">
+              <a href="#" class="menu_link" aria-label="Visit the blog page"
+                >Project #3</a
+              >
+            </li>
+          </ul>
+        </nav>
       </header>
       <div class="main">
         <div class="cur_elements">

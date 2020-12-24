@@ -19,52 +19,70 @@
     />
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header__secondary">
-        <!-- will need to fix navbar -->
-
-        <ul id="menu">
-          <li class="nav__item">
-            <a href="./index.html" class="navbar__links" id="home-page">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="./about.html" class="navbar__links" id="about-page"
-              >About</a
+    <header>
+      <nav class="navbar">
+        <input
+          id="menu-toggle"
+          class="inputbox"
+          type="checkbox"
+          aria-label="Open the menu for page links"
+        />
+        <label for="menu-toggle" class="hamburger-container">
+          <span class="hamburger"></span>
+        </label>
+        <ul class="menu">
+          <li class="menu_item">
+            <a
+              href="./index.html"
+              class="menu_link"
+              aria-label="Visit the home page"
+              >Home</a
             >
           </li>
-          <li class="nav__item">
-            <a href="./projects.html" class="navbar__links" id="projects-page"
-              >Projects</a
+          <li class="menu_item">
+            <a
+              href="./projects.html"
+              class="menu_link"
+              aria-label="Visit the about page"
+              >Project #1</a
+            >
+          </li>
+          <li class="menu_item">
+            <a
+              href="./about.html"
+              class="menu_link"
+              aria-label="Visit the services page"
+              >Project #2</a
+            >
+          </li>
+          <li class="menu_item">
+            <a href="#" class="menu_link" aria-label="Visit the blog page"
+              >Project #3</a
             >
           </li>
         </ul>
-      </header>
+      </nav>
+    </header>
 
-      <img
-        src="./img/nikita_velikanin_unsplash.jpg"
-        alt="The Picture of Siberia region in Russia"
-      />
+    <main class="main">
+      <a
+        href="#"
+        class="gradient-link"
+        aria-label="This would normally go to a contact page but doesn't go anywhere for demo purposes"
+        >Contact Us</a
+      >
+    </main>
 
-      <p id="aboutMe">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-        necessitatibus quas pariatur iusto, asperiores sunt esse quis ipsa
-        blanditiis magnam dolor totam laudantium dolorum repellendus ullam!
-        Alias ullam tempore aspernatur, magni commodi perferendis repudiandae
-        praesentium fugit porro, expedita deserunt laborum incidunt illum ipsam,
-        sint itaque unde voluptas. Quo, illo dolore!
-      </p>
+    <footer>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-etsy"></i></a>
 
-      <footer>
-        <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-etsy"></i></a>
-
-          <p>AG© 2020</p>
-        </div>
-      </footer>
-    </div>
+        <p>AG© 2020</p>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/about.js"></script>
