@@ -99,6 +99,7 @@ html {
 #navbar__menu li {
   -webkit-appearance: none;
   padding: 0 0.5rem;
+  text-decoration: none;
   list-style-type: none;
   color: var(--purpleBrown);
   font-weight: 500;
