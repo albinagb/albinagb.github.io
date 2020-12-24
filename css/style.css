@@ -107,7 +107,7 @@ html {
 #navbar__menu li a:visited,
 li a:checked {
   color: var(--purpleBrown);
-  outline: 0;
+  -webkit-text-fill-color: var(--purpleBrown);
 }
 
 #navbar__menu li a:hover {
