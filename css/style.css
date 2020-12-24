@@ -106,8 +106,8 @@ html {
 
 #navbar__menu li a:visited,
 li a:checked {
-  color: rgb(73, 24, 14);
-  -webkit-text-fill-color: rgb(73, 24, 14);
+  color: var(--purpleBrown);
+  -webkit-activelink: var(--purpleBrown);
 }
 
 #navbar__menu li a:hover {
