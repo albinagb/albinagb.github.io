@@ -114,6 +114,10 @@ html {
   transition: all 0.2s ease-in-out;
 }
 
+#navbar__menu li a:checked {
+  color: white;
+}
+
 .navbar__links {
   text-decoration: none;
 }
