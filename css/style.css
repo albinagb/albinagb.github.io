@@ -114,7 +114,7 @@ html {
   transition: all 0.2s ease-in-out;
 }
 
-#navbar__menu li a:checked {
+#navbar__menu li:checked {
   color: white;
 }
 
