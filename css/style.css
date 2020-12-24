@@ -104,7 +104,8 @@ html {
   transition: all 0.6s ease-in-out;
 }
 
-#navbar__menu li a:visited {
+#navbar__menu li a:visited,
+li a:checked {
   color: var(--purpleBrown);
 }
 
@@ -112,10 +113,6 @@ html {
   color: white;
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
-}
-
-#navbar__menu li:checked {
-  color: white;
 }
 
 .navbar__links {
