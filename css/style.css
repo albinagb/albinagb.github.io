@@ -96,7 +96,7 @@ html {
   z-index: 2;
 }
 
-#navbar__menu > li {
+#navbar__menu li {
   -webkit-appearance: none;
   padding: 0 0.5rem;
   list-style-type: none;
