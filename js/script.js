@@ -10,6 +10,16 @@ let exchEl = document.querySelector(".ex-ch");
 
 let arr = [];
 
+// summer theme mode
+
+const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  console.log("hello Mir");
+  var element = document.body;
+  element.classList.toggle("summer-theme");
+});
+
 // Create selections
 
 function makeSelections(selections_arr, currency_el) {
