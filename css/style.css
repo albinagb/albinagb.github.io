@@ -15,6 +15,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
 }
 
 body,
@@ -354,15 +358,45 @@ footer p {
   color: white;
 }
 
-/* Winter Mode */
+/* Summer Mode */
 
-.summer-theme {
-  background: linear-gradient(
-    #172841 0%,
-    #357694 18%,
-    #2a3c4b 60%,
-    #13181f 80%,
-    #9fc3f5
-  );
-  color: green;
+.warmBckg {
+  background: #f2de9d;
+}
+
+.warmSun {
+  fill: #fdfde5;
+}
+
+.triangleBckg {
+  fill: #ed462f;
+}
+
+.rectangleBckg {
+  fill: rgb(247, 156, 91);
+}
+
+/* --- .1 Transitions */
+
+#Oval {
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  transition: 0.25s;
+}
+
+#Oval:hover {
+  border: solid red 1rem;
+  fill: rgb(162, 240, 236);
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2rem rgba(#fff, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ed462f;
+  }
 }
