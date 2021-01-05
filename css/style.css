@@ -15,10 +15,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  -o-transition: all 2s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
 body,
@@ -361,7 +361,13 @@ footer p {
 /* Summer Mode */
 
 .warmBckg {
-  background: #f2de9d;
+  background: linear-gradient(
+    #f2de9d 0%,
+    #fceab0 18%,
+    #f7e8b7 60%,
+    #f7e2a0 80%,
+    #fae59f
+  );
 }
 
 .warmSun {
@@ -378,25 +384,7 @@ footer p {
 
 /* --- .1 Transitions */
 
-#Oval {
+.sunLight {
   cursor: pointer;
-  color: rgb(255, 0, 0);
   transition: 0.25s;
-}
-
-#Oval:hover {
-  border: solid red 1rem;
-  fill: rgb(162, 240, 236);
-}
-
-.btn-toggle:hover,
-.btn-toggle:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2rem rgba(#fff, 0);
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 #ed462f;
-  }
 }
