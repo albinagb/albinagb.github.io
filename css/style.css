@@ -85,7 +85,8 @@ body {
 #abstract__human {
   grid-column: 3 / 4;
   grid-row: 3 / -1;
-  margin: 5rem 0 0 0rem;
+  margin: 4rem 0 0 0rem;
+  padding: 0;
   transform: rotate(26deg);
 }
 
@@ -164,6 +165,8 @@ body {
 
 .inputbox:hover + .hamburger-container {
   cursor: pointer;
+  position: absolute;
+  z-index: 2;
 }
 
 .inputbox + .hamburger-container .hamburger {
@@ -229,7 +232,7 @@ body {
 
 .inputbox:checked + .hamburger-container ~ .menu {
   height: 16rem;
-  background-color: rgba(250, 56, 8, 0.2);
+  background-color: rgba(250, 250, 250, 0.3);
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item {
@@ -281,7 +284,7 @@ body {
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link:hover {
-  color: rgb(238, 84, 71);
+  color: #7F85A7;
 }
 @keyframes scaleIn {
   from {
@@ -301,7 +304,7 @@ body {
   padding: 1rem 3rem;
 }
 
-/* Button to Contact Us */
+/* Button to Contact Us
 
 .gradient-link {
   color: #fff;
@@ -316,9 +319,9 @@ body {
 }
 
 .gradient-link:hover {
-  /* animation: gradientMove 6s ease both; */
+  animation: gradientMove 6s ease both;
   background: linear-gradient(to right, #2575fc 0%, #cb119c 100%);
-}
+} */
 
 @media screen and (max-width: 420px) {
   .inputbox + .hamburger-container ~ .menu {
@@ -362,11 +365,11 @@ footer p {
 
 .warmBckg {
   background: linear-gradient(
-    #f2de9d 0%,
-    #fceab0 18%,
-    #f7e8b7 60%,
-    #f7e2a0 80%,
-    #fae59f
+    #e2b9a8 0%,
+    #f4c578 18%,
+    #fcc164 60%,
+    #f1c275 80%,
+    #f7b285
   );
 }
 
@@ -382,9 +385,90 @@ footer p {
   fill: rgb(247, 156, 91);
 }
 
+.strokesColor {
+  stroke: #fdfde5;
+}
+
 /* --- .1 Transitions */
 
-.sunLight {
+#Oval {
   cursor: pointer;
-  transition: 0.25s;
+  transition: all .2s ease-in-out;
 }
+
+#Oval:hover {
+ /* need to find the way to hover */
+ 
+}
+
+
+/* sun/moon animations */
+
+@keyframes motion {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes motion2 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+
+#Oval1 {
+  transform-origin: 33px 33px;
+  animation-timing-function: cubic;
+  animation-name: motion;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+
+#Oval2 {
+  transform-origin: 33px 33px;
+  animation-timing-function: cubic;
+  animation-name: motion2;
+  animation-duration: 6s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+/* 

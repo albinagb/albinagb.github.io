@@ -7,6 +7,7 @@ btn.addEventListener("click", function () {
   let sunElems = document.querySelectorAll(".sunLight");
   let triangleElems = document.querySelectorAll(".triangleOvals");
   let earthElems = document.querySelectorAll(".rectEarth");
+  let strokeElems = document.querySelectorAll(".strokes");
 
   element.classList.toggle("warmBckg");
 
@@ -20,5 +21,9 @@ btn.addEventListener("click", function () {
 
   triangleElems.forEach((e) => {
     e.classList.toggle("triangleBckg");
+  });
+
+  strokeElems.forEach((e) => {
+    e.classList.toggle("strokesColor");
   });
 });
