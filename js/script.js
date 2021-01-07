@@ -1,8 +1,11 @@
-// summer theme mode
+//
+//
+//
+// summer theme mode code (need to add local storage to keep the theme)
 
 const btn = document.querySelector(".btn-toggle");
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", () => {
   let element = document.body;
   let sunElems = document.querySelectorAll(".sunLight");
   let triangleElems = document.querySelectorAll(".triangleOvals");

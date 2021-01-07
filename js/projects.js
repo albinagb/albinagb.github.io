@@ -23,13 +23,13 @@ button.addEventListener("click", () => {
 
       el.animate(
         [
-          { transform: "translate(0,0)" },
+          // { transform: "translate(" + to.x + "rem," + to.y + "rem)" },
           { transform: "translate(" + to.x + "rem," + to.y + "rem)" },
         ],
         {
           duration: (Math.random() + 1) * 1000,
           direction: "alternate",
-          fill: "both",
+          fill: "forwards",
           iterations: 1,
           easing: "ease-in-out",
         }
@@ -97,7 +97,6 @@ function calculate() {
       makeSelections(arr, currencyEl_one);
       makeSelections(arr, currencyEl_two);
 
-      // currencyEl_two.value = arr[16];
       currency_one = currencyEl_one.value;
       currency_two = currencyEl_two.value;
 
