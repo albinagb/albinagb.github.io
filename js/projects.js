@@ -22,10 +22,7 @@ button.addEventListener("click", () => {
       };
 
       el.animate(
-        [
-          // { transform: "translate(" + to.x + "rem," + to.y + "rem)" },
-          { transform: "translate(" + to.x + "rem," + to.y + "rem)" },
-        ],
+        [{ transform: "translate(" + to.x + "rem," + to.y + "rem)" }],
         {
           duration: (Math.random() + 1) * 1000,
           direction: "alternate",
