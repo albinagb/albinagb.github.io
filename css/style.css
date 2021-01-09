@@ -4,16 +4,11 @@
 
 :root {
   /* Need to add colors 'background: var(--brandColor)*/
---purpleBrown: hsla(10, 67%, 18%, 1);
+  --purpleBrown: hsla(10, 67%, 18%, 1);
 }
 
 * {
   box-sizing: border-box;
-  /* -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease; */
-
 }
 
 body,
@@ -27,6 +22,11 @@ html {
   font-weight: 300;
   overflow-x: hidden;
   background-clip: inherit;
+
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
 }
 
 body {
@@ -70,7 +70,7 @@ body {
   display: grid;
   margin: -0.5rem 0 0 4rem;
   grid-template-columns: 15rem 7rem 10rem;
-  grid-template-rows: repeat(2, 8rem); 
+  grid-template-rows: repeat(2, 8rem);
   grid-gap: 1rem;
   /* transform: rotate(-26deg); */
   position: absolute;
@@ -120,34 +120,31 @@ body {
   margin: 0 0 0 1.7rem;
 }
 
-
 #navbar__menu {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-#navbar__menu > li,
-#navbar__menu li a:visited {
+a:link {
   text-decoration: none;
+  outline: 0;
+  color: inherit;
+}
+
+#navbar__menu > li,
+#navbar__menu li a:visited,
+#navbar__menu li a:focus {
   list-style-type: none;
   color: var(--purpleBrown);
   padding: 0 0.5rem;
   font-weight: 500;
-  transition: all 0.6s ease-in-out;
-}
-
-#navbar__menu li a:focus {
-  outline: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 #navbar__menu li a:hover {
   color: #fff;
   transform: scale(1.2);
-  transition: all 0.2s ease-in-out;
-}
-
-.navbar__links {
-  text-decoration: none;
+  transition: all 0.4s ease-in-out;
 }
 
 /*   Other Pages Menu - Navbar    */
@@ -288,7 +285,7 @@ body {
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link:hover {
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
 }
 @keyframes scaleIn {
@@ -398,14 +395,12 @@ footer p {
 
 #Oval {
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 #Oval:hover {
- /* need to find the way to hover */
- 
+  /* need to find the way to hover */
 }
-
 
 /* sun/moon animations */
 
@@ -458,7 +453,6 @@ footer p {
   }
 }
 
-
 #Oval1 {
   transform-origin: 33px 33px;
   animation-timing-function: cubic;
@@ -466,7 +460,6 @@ footer p {
   animation-duration: 6s;
   animation-iteration-count: infinite;
 }
-
 
 #Oval2 {
   transform-origin: 33px 33px;
@@ -476,4 +469,3 @@ footer p {
   animation-delay: 1.5s;
   animation-iteration-count: infinite;
 }
-/* 

@@ -36,6 +36,11 @@ html {
   background-clip: inherit;
 }
 
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
 /*    Currency Elements    */
 
 .icon_elem {
@@ -172,9 +177,9 @@ footer a {
   font-size: 1.1rem;
   text-decoration: none;
   color: white;
-  /* with the transform anim gives nice smooth button scale anim */
-  transition: background 0.5s ease-in, transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
+
 footer a:hover {
   color: #0a4012;
   transform: scale(1.2);
