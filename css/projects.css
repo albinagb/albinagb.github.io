@@ -1,15 +1,9 @@
 :root {
   /* Need to add colors 'background: var(--brandColor)*/
-  --dirty-orange: rgb(221, 97, 51);
-  --brightCoral: rgb(247, 85, 49);
   --purpleBrown: rgb(73, 24, 15);
-  --calmPink: rgb(241, 164, 147);
-  --brightBlack: rgb(8, 8, 8);
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 

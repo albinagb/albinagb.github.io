@@ -4,21 +4,16 @@
 
 :root {
   /* Need to add colors 'background: var(--brandColor)*/
-  --dirtyOrange: hsla(16, 68, 52, 1);
-  --brightCoral: hsla(11, 88, 56, 1);
-  --purpleBrown: hsla(10, 67%, 18%, 1);
-  --calmPink: hsla(11, 77, 77, 1);
-  --brightBlack: hsla(0, 0, 5, 1);
+--purpleBrown: hsla(10, 67%, 18%, 1);
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  -webkit-transition: all 1s ease;
+  /* -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  -o-transition: all 1s ease; */
+
 }
 
 body,
@@ -74,8 +69,8 @@ body {
   width: 66vw;
   display: grid;
   margin: -0.5rem 0 0 4rem;
-  /* grid-template-columns: repeat(3, 2rem);
-  grid-template-rows: repeat(3, 2rem); */
+  grid-template-columns: 15rem 7rem 10rem;
+  grid-template-rows: repeat(2, 8rem); 
   grid-gap: 1rem;
   /* transform: rotate(-26deg); */
   position: absolute;
@@ -91,12 +86,14 @@ body {
 }
 
 .authorName {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 2;
   color: var(--purpleBrown);
   font-size: 0.8rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: -0.2rem;
-  margin: 0.7rem 0 0 16rem;
+  margin-top: 0.7rem;
   position: absolute;
   z-index: 1;
 }
@@ -116,9 +113,15 @@ body {
 
 /*   Home Page Menu - Navbar    */
 
+.header {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  padding: 0;
+  margin: 0 0 0 1.7rem;
+}
+
+
 #navbar__menu {
-  margin: 10rem 0rem 0rem 27rem;
-  height: 3rem;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
