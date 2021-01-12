@@ -1,5 +1,13 @@
 //
 //
+
+// Transitions Only After Page Load
+let bodyEl = document.querySelector("body");
+
+window.addEventListener("load", (event) => {
+  bodyEl.classList.remove("preload");
+});
+
 //
 // summer theme mode code (need to add local storage to keep the theme)
 

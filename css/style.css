@@ -9,6 +9,11 @@
 
 * {
   box-sizing: border-box;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
 body,
@@ -22,11 +27,6 @@ html {
   font-weight: 300;
   overflow-x: hidden;
   background-clip: inherit;
-
-  -webkit-transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -ms-transition: background 1s ease-in-out;
-  -o-transition: background 1s ease-in-out;
 }
 
 body {
@@ -45,6 +45,13 @@ body {
   background-size: cover;
 }
 
+body.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 /* Home Elements */
 
 .composition {
@@ -52,8 +59,9 @@ body {
   grid-template-columns: repeat(3, 20rem);
   grid-template-rows: repeat(2, 5rem) 10rem repeat(2, 4rem) 5rem;
   grid-gap: 1rem;
-  margin: -3.6rem 0 0 0;
+  margin-top: -3.6rem;
   transform: rotate(-26deg);
+  transition: all 1s;
 }
 
 .theEarth {
@@ -325,17 +333,6 @@ a:link {
   background: linear-gradient(to right, #2575fc 0%, #cb119c 100%);
 } */
 
-@media screen and (max-width: 420px) {
-  .inputbox + .hamburger-container ~ .menu {
-    padding: 4em 0 3em;
-  }
-  .inputbox + .hamburger-container ~ .menu .menu_item {
-    width: 50%;
-  }
-}
-
-/* _____________________ */
-
 /* Footer */
 
 footer {
@@ -468,4 +465,42 @@ footer p {
   animation-duration: 6s;
   animation-delay: 1.5s;
   animation-iteration-count: infinite;
+}
+
+/* _____________________ */
+
+@media screen and (max-width: 420px) {
+  .inputbox + .hamburger-container ~ .menu {
+    padding: 4em 0 3em;
+  }
+  .inputbox + .hamburger-container ~ .menu .menu_item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .composition {
+    margin: 0.5rem 0 0 0;
+    transition: all 1s;
+    transform: rotate(-0deg);
+  }
+
+  #abstract__human {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .composition {
+    margin: 0.5rem 0 0 -5rem;
+    transition: all 1s;
+    box-sizing: border-box;
+  }
+
+  .header {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 0;
+    margin: 0 0 0 0rem;
+  }
 }
