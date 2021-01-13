@@ -10,10 +10,10 @@
 * {
   box-sizing: border-box;
 
-  -webkit-transition: all 1s ease;
+  /* -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  -o-transition: all 1s ease; */
 }
 
 body,
@@ -45,12 +45,12 @@ body {
   background-size: cover;
 }
 
-body.preload * {
+/* .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
-}
+} */
 
 /* Home Elements */
 
@@ -61,7 +61,7 @@ body.preload * {
   grid-gap: 1rem;
   margin-top: -3.6rem;
   transform: rotate(-26deg);
-  transition: all 1s;
+  transition: all 1s ease;
 }
 
 .theEarth {
@@ -481,7 +481,6 @@ footer p {
 @media screen and (max-width: 1200px) {
   .composition {
     margin: 0.5rem 0 0 0;
-    transition: all 1s;
     transform: rotate(-0deg);
   }
 
@@ -493,7 +492,7 @@ footer p {
 @media screen and (max-width: 800px) {
   .composition {
     margin: 0.5rem 0 0 -5rem;
-    transition: all 1s;
+    transition: all 500ms ease-in;
     box-sizing: border-box;
   }
 
