@@ -484,7 +484,6 @@ footer p {
 @media screen and (max-width: 800px) {
   .composition {
     margin: 0.5rem 0 0 -3rem;
-    box-sizing: border-box;
   }
 
   svg {
@@ -511,7 +510,27 @@ footer p {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
+  .composition {
+    margin: 0 0 0 -8.5rem;
+  }
+
+  .header {
+    /* grid-column: 1 / span 1;
+    grid-row: 1 / span 1; */
+    margin: 2rem 0 0 4rem;
+  }
+
+  #authorName {
+    margin-top: 2rem;
+  }
+
+  #footer__home {
+    /* grid-column: 3 span 1;
+    grid-row: 4 span 1;
+    margin-top: 1em; */
+  }
+
   .inputbox + .hamburger-container ~ .menu {
     padding: 4em 0 3em;
   }
