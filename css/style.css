@@ -62,16 +62,17 @@ body {
   margin-top: -3.6rem;
   transform: rotate(-26deg);
   transition: all 1s ease;
+  width: 56rem;
 }
 
-.theEarth {
+#theEarth {
   grid-column: 1 / 4;
   grid-row: 1 / 5;
   margin: -6rem 0 0 3rem;
   position: relative;
 }
 
-.nameHeader {
+#nameHeader {
   grid-column: 1 / 3;
   grid-row: 1 / 4;
   width: 66vw;
@@ -93,7 +94,7 @@ body {
   transform: rotate(26deg);
 }
 
-.authorName {
+#authorName {
   grid-column: 2 / 3;
   grid-row: 1 / span 2;
   color: var(--purpleBrown);
@@ -469,15 +470,6 @@ footer p {
 
 /* _____________________ */
 
-@media screen and (max-width: 420px) {
-  .inputbox + .hamburger-container ~ .menu {
-    padding: 4em 0 3em;
-  }
-  .inputbox + .hamburger-container ~ .menu .menu_item {
-    width: 50%;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .composition {
     margin: 0.5rem 0 0 0;
@@ -491,15 +483,50 @@ footer p {
 
 @media screen and (max-width: 800px) {
   .composition {
-    margin: 0.5rem 0 0 -5rem;
+    margin: 0.5rem 0 0 0;
     transition: all 500ms ease-in;
     box-sizing: border-box;
+  }
+
+  #theEarth {
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    margin: -2rem 0 0 3rem;
   }
 
   .header {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     padding: 0;
+    margin: 0 0 0 -1rem;
+  }
+
+  svg {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* .composition {
+    margin: 0.5rem 0 0 -5rem;
+    transition: all 500ms ease-in;
+    box-sizing: border-box;
+  } */
+
+  /* .header {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 0;
     margin: 0 0 0 0rem;
+  } */
+}
+
+@media screen and (max-width: 420px) {
+  .inputbox + .hamburger-container ~ .menu {
+    padding: 4em 0 3em;
+  }
+  .inputbox + .hamburger-container ~ .menu .menu_item {
+    width: 50%;
   }
 }

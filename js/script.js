@@ -1,7 +1,7 @@
 //
 //
 
-// Transitions Only After Page Load
+// Transitions Only After Page Loaded
 let bodyEl = document.body;
 
 window.addEventListener("DOMContentLoaded", (event) => {
