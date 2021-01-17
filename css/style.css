@@ -140,10 +140,14 @@ a:link {
   color: inherit;
 }
 
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
 #navbar__menu > li,
 #navbar__menu li a:visited,
 #navbar__menu li a:focus {
-  list-style-type: none;
   color: var(--purpleBrown);
   padding: 0 0.5rem;
   font-weight: 500;
@@ -152,8 +156,58 @@ a:link {
 
 #navbar__menu li a:hover {
   color: #fff;
-  transform: scale(1.2);
-  transition: all 0.4s ease-in-out;
+}
+
+/* Projects Menu */
+
+.drop li {
+  opacity: 0;
+  transform-origin: top center;
+}
+
+.drop li a {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0.5rem 0 0 -2.7rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1.1rem;
+  width: 37vmin;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#navbar__menu li .drop li a:hover {
+  color: #686d8a;
+}
+
+#navbar__menu li:hover .projMenu li:first-of-type {
+  animation: openMenu 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+#navbar__menu li:hover .projMenu li:nth-of-type(2) {
+  animation: openMenu 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+#navbar__menu li:hover .projMenu li:nth-of-type(3) {
+  animation: openMenu 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+/* #navbar__menu li:hover .projMenu li:last-of-type {
+  animation: openMenu 0.3s ease-in-out forwards;
+  animation-delay: 1.2s;
+} */
+
+@keyframes openMenu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
 
 /*   Other Pages Menu - Navbar    */
@@ -240,7 +294,7 @@ a:link {
 }
 
 .inputbox:checked + .hamburger-container ~ .menu {
-  height: 16rem;
+  height: 8.5rem;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -257,7 +311,7 @@ a:link {
   animation: scaleIn 300ms cubic-bezier(0.71, 0.55, 0.62, 1.37) 0ms both;
 }
 
-.inputbox:checked + .hamburger-container ~ .menu .menu_item:nth-child(2) {
+/* .inputbox:checked + .hamburger-container ~ .menu .menu_item:nth-child(2) {
   animation: scaleIn 300ms cubic-bezier(0.71, 0.55, 0.62, 1.37) 100ms both;
 }
 
@@ -271,7 +325,7 @@ a:link {
 
 .inputbox:checked + .hamburger-container ~ .menu .menu_item:nth-child(5) {
   animation: scaleIn 300ms cubic-bezier(0.71, 0.55, 0.62, 1.57) 400ms both;
-}
+} */
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link {
   position: relative;
