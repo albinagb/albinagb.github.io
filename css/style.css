@@ -79,7 +79,7 @@ body {
   display: grid;
   margin: -0.5rem 0 0 4rem;
   grid-template-columns: 15rem 7rem 10rem;
-  grid-template-rows: repeat(2, 8rem);
+  grid-template-rows: repeat(3, 6rem);
   grid-gap: 1rem;
   /* transform: rotate(-26deg); */
   position: absolute;
@@ -124,14 +124,15 @@ body {
 
 .header {
   grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
   padding: 0;
-  margin: 0 0 0 1.7rem;
+  margin: -0.9rem 0 0 1.7rem;
 }
 
 #navbar__menu {
   font-size: 1.5rem;
   text-transform: uppercase;
+  margin-top: 2rem;
 }
 
 a:link {
@@ -160,18 +161,22 @@ li {
 
 /* Projects Menu */
 
+ul .drop {
+  margin-top: 0.8rem;
+}
+
 .drop li {
   opacity: 0;
   transform-origin: top center;
 }
 
 .drop li a {
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 0.5rem 0 0 -2.7rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0.3rem 0 0 -2.7rem;
   padding: 0.5rem 1rem;
   display: block;
   font-size: 1.1rem;
-  width: 37vmin;
+  width: 36vmin;
   transition: background-color 0.5s ease-in-out;
 }
 
