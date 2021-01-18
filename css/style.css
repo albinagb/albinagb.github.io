@@ -102,7 +102,7 @@ body {
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: -0.2rem;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   position: absolute;
   z-index: 1;
 }
@@ -181,7 +181,7 @@ ul .drop {
   padding: 0.5rem 1rem;
   display: block;
   font-size: 1.05rem;
-  width: 246px;
+  width: 247px;
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -196,12 +196,12 @@ ul .drop {
 
 #navbar__menu li:hover .projMenu li:nth-of-type(2) {
   animation: openMenu 0.3s ease-in-out forwards;
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 
 #navbar__menu li:hover .projMenu li:nth-of-type(3) {
   animation: openMenu 0.3s ease-in-out forwards;
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 
 /* #navbar__menu li:hover .projMenu li:last-of-type {
