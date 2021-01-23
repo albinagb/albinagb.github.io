@@ -5,6 +5,16 @@
 :root {
   /* Need to add colors 'background: var(--brandColor)*/
   --purpleBrown: hsla(10, 67%, 18%, 1);
+  --color-1: #9fc3f5;
+  --color-2: #a8daf2;
+  --color-3: #c5dbed;
+  --color-4: #cbd9ee;
+
+  --color-5: #e2b9a8;
+  --color-6: #f4c578;
+  --color-7: #fcc164;
+  --color-8: #f1c275;
+  --color-9: #f7b285;
 }
 
 * {
@@ -29,27 +39,90 @@ html {
   background-clip: inherit;
 }
 
-body {
-  min-height: 100vh;
+.afterload * {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.coldBckgDiv {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
   background: linear-gradient(
-      #9fc3f5 0%,
-      #a8daf2 18%,
-      #c5dbed 60%,
-      #cbd9ee 80%,
-      #9fc3f5
+      var(--color-1) 0%,
+      var(--color-2) 18%,
+      var(--color-3) 60%,
+      var(--color-4) 80%,
+      var(--color-1)
     )
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation: transanimB 1s ease;
 }
 
-.afterload * {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
+/* Summer Mode */
+
+.warmBckgDiv {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: linear-gradient(
+      var(--color-5) 0%,
+      var(--color-6) 18%,
+      var(--color-7) 60%,
+      var(--color-8) 80%,
+      var(--color-9)
+    )
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation: transanimA 1s ease;
+}
+
+@keyframes transanimA {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transanimB {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.warmSun {
+  fill: #fdfde5;
+}
+
+.triangleBckg {
+  fill: #ed462f;
+}
+
+.rectangleBckg {
+  fill: rgb(247, 156, 91);
+}
+
+.strokesColor {
+  stroke: #fdfde5;
 }
 
 /* Home Elements */
@@ -185,8 +258,13 @@ ul .drop {
 }
 
 #navbar__menu li .drop li a:hover {
-  color: var(--purpleBrown);
-  font-weight: 600;
+  color: #fffff;
+  background-color: rgba(127, 133, 167, 0.69);
+}
+
+#navbar__menu li .dropNew li a:hover {
+  color: #fffff;
+  background-color: rgba(237, 70, 47, 0.6);
 }
 
 #navbar__menu li:hover .projMenu li:first-of-type {
@@ -388,34 +466,6 @@ footer a:hover {
 footer p {
   font-size: 0.6rem;
   color: white;
-}
-
-/* Summer Mode */
-
-.warmBckg {
-  background: linear-gradient(
-    #e2b9a8 0%,
-    #f4c578 18%,
-    #fcc164 60%,
-    #f1c275 80%,
-    #f7b285
-  );
-}
-
-.warmSun {
-  fill: #fdfde5;
-}
-
-.triangleBckg {
-  fill: #ed462f;
-}
-
-.rectangleBckg {
-  fill: rgb(247, 156, 91);
-}
-
-.strokesColor {
-  stroke: #fdfde5;
 }
 
 /* --- .1 Transitions */

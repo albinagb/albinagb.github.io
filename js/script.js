@@ -13,14 +13,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 const btn = document.querySelector(".btn-toggle");
 
+// let animate =  { background: ["#009900", "#ff0000"] },
+
 btn.addEventListener("click", () => {
-  let element = document.body;
+  let element = document.querySelector(".coldBckgDiv");
   let sunElems = document.querySelectorAll(".sunLight");
   let triangleElems = document.querySelectorAll(".triangleOvals");
   let earthElems = document.querySelectorAll(".rectEarth");
   let strokeElems = document.querySelectorAll(".strokes");
-
-  element.classList.toggle("warmBckg");
+  let dropElem = document.querySelector(".drop");
 
   sunElems.forEach((e) => {
     e.classList.toggle("warmSun");
@@ -37,4 +38,8 @@ btn.addEventListener("click", () => {
   strokeElems.forEach((e) => {
     e.classList.toggle("strokesColor");
   });
+
+  element.classList.toggle("warmBckgDiv");
+
+  dropElem.classList.toggle("dropNew");
 });
