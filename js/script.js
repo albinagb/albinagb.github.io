@@ -15,6 +15,7 @@ if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
 
   if (currentTheme === "warm-theme") {
+    // the below line should be fixed
     switchTheme.checked = true;
   }
 }
@@ -34,7 +35,6 @@ function switchTheme(e) {
   if (element.classList == "coldBckgDiv") {
     document.documentElement.setAttribute("data-theme", "warm-theme");
     localStorage.setItem("theme", "warm-theme");
-    console.log("warm theme");
 
     sunElems.forEach((e) => {
       e.classList.add("warmSun");
@@ -59,7 +59,6 @@ function switchTheme(e) {
     document.documentElement.setAttribute("data-theme", "cold-theme");
 
     localStorage.setItem("theme", "cold-theme");
-    console.log("cold theme");
 
     sunElems.forEach((e) => {
       e.classList.remove("warmSun");
