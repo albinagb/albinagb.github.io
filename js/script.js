@@ -31,8 +31,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 const btn = document.querySelector(".btn-toggle");
 
 function switchTheme(e) {
-  console.log(element.classList);
-
   if (element.classList == "coldBckgDiv") {
     document.documentElement.setAttribute("data-theme", "warm-theme");
     localStorage.setItem("theme", "warm-theme");
