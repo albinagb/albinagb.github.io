@@ -3,27 +3,39 @@
 /* --- */
 
 :root {
-  /* Need to add colors 'background: var(--brandColor)*/
-  --purpleBrown: hsla(10, 67%, 18%, 1);
+  --purple-brown: hsla(10, 67%, 18%, 1);
   --color-1: #9fc3f5;
   --color-2: #a8daf2;
   --color-3: #c5dbed;
   --color-4: #cbd9ee;
+  --color-5: #bed1ee;
 
-  --color-5: #e2b9a8;
-  --color-6: #f4c578;
-  --color-7: #fcc164;
-  --color-8: #f1c275;
-  --color-9: #f7b285;
+  --sun-color: #fff;
+  --triangle-color: #7f85a7;
+  --rectangle-color: #4e8a9a;
+  --stroke-color: #fff;
+  --link-color: #fff;
+  --hover-color: rgba(127, 133, 167, 0.69);
+}
+
+[data-theme="warm-theme"] {
+  --purple-brown: hsla(10, 67%, 18%, 1);
+  --color-1: #e2b9a8;
+  --color-2: #f4c578;
+  --color-3: #fcc164;
+  --color-4: #f1c275;
+  --color-5: #f7b285;
+
+  --sun-color: #fdfde5;
+  --triangle-color: #ed462f;
+  --rectangle-color: rgb(247, 156, 91);
+  --stroke-color: #fdfde5;
+  --link-color: #fff;
+  --hover-color: rgba(237, 70, 47, 0.6);
 }
 
 * {
   box-sizing: border-box;
-
-  /* -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease; */
 }
 
 body,
@@ -72,11 +84,11 @@ html {
   width: 100vw;
   position: absolute;
   background: linear-gradient(
-      var(--color-5) 0%,
-      var(--color-6) 18%,
-      var(--color-7) 60%,
-      var(--color-8) 80%,
-      var(--color-9)
+      var(--color-1) 0%,
+      var(--color-2) 18%,
+      var(--color-3) 60%,
+      var(--color-4) 80%,
+      var(--color-5)
     )
     no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -84,6 +96,22 @@ html {
   -o-background-size: cover;
   background-size: cover;
   animation: transanimA 1s ease;
+}
+
+.warmSun {
+  fill: var(--sun-color);
+}
+
+.triangleBckg {
+  fill: var(--triangle-color);
+}
+
+.rectangleBckg {
+  fill: var(--rectangle-color);
+}
+
+.strokesColor {
+  stroke: var(--stroke-color);
 }
 
 @keyframes transanimA {
@@ -108,21 +136,6 @@ html {
   100% {
     opacity: 1;
   }
-}
-.warmSun {
-  fill: #fdfde5;
-}
-
-.triangleBckg {
-  fill: #ed462f;
-}
-
-.rectangleBckg {
-  fill: rgb(247, 156, 91);
-}
-
-.strokesColor {
-  stroke: #fdfde5;
 }
 
 /* Home Elements */
@@ -169,7 +182,7 @@ html {
 #authorName {
   grid-column: 2 / 3;
   grid-row: 1 / span 2;
-  color: var(--purpleBrown);
+  color: var(--purple-brown);
   font-size: 0.8rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -226,7 +239,7 @@ li {
 #navbar__menu > li,
 #navbar__menu li a:visited,
 #navbar__menu li a:focus {
-  color: var(--purpleBrown);
+  color: var(--purple-brown);
   padding: 0 0.5rem;
   font-weight: 500;
   transition: all 0.4s ease-in-out;
@@ -258,14 +271,14 @@ ul .drop {
 }
 
 #navbar__menu li .drop li a:hover {
-  color: #fffff;
-  background-color: rgba(127, 133, 167, 0.69);
+  color: var(--link-color);
+  background-color: var(--hover-color);
 }
 
-#navbar__menu li .dropNew li a:hover {
-  color: #fffff;
-  background-color: rgba(237, 70, 47, 0.6);
-}
+/* #navbar__menu li .dropNew li a:hover {
+  color: var(--link-color);
+  background-color: var(--hover-color);
+} */
 
 #navbar__menu li:hover .projMenu li:first-of-type {
   animation: openMenu 0.3s ease-in-out forwards;
@@ -382,7 +395,7 @@ ul .drop {
 }
 
 .inputbox:checked + .hamburger-container ~ .menu {
-  height: 8.5rem;
+  height: 10rem;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -390,13 +403,17 @@ ul .drop {
   position: relative;
   opacity: 0;
   margin: auto;
-  width: 30%;
+  width: 40%;
   text-align: left;
   transform-origin: 10% 100%;
 }
 
 .inputbox:checked + .hamburger-container ~ .menu .menu_item:nth-child(1) {
   animation: scaleIn 300ms cubic-bezier(0.71, 0.55, 0.62, 1.37) 0ms both;
+}
+
+.inputbox:checked + .hamburger-container ~ .menu .menu_item:nth-child(2) {
+  animation: scaleIn 300ms cubic-bezier(0.71, 0.55, 0.62, 1.37) 100ms both;
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link {
@@ -415,13 +432,12 @@ ul .drop {
 
 .menu_link,
 .inputbox:checked + .hamburger-container ~ .menu .menu_item .menu_link {
-  color: #ffffff;
-  font-weight: 400;
+  color: #f8624e;
+  font-weight: 500;
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link:hover {
   color: #fff;
-  font-weight: bold;
 }
 @keyframes scaleIn {
   from {
@@ -437,7 +453,7 @@ ul .drop {
 /*--- main ---*/
 
 .main {
-  color: var(--purpleBrown);
+  color: var(--purple-brown);
   padding: 1rem 3rem;
 }
 
