@@ -88,13 +88,13 @@ html {
   animation: transanimB 1s ease;
 }
 
-@media screen and (max-width: 1024px) {
-  /* Specific to this particular image */
-  .coldBckgDiv {
+/* @media screen and (max-width: 1024px) {
+  .coldBckgDiv,
+  .warmBckgDiv {
     left: 50%;
-    margin-left: -512px; /* 50% */
+    margin-left: -512px;
   }
-}
+} */
 
 .sunLight {
   fill: var(--sun-color);
