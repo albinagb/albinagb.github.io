@@ -567,7 +567,7 @@ ul .drop {
 }
 
 .inputbox + .hamburger-container ~ .menu .menu_item .menu_link:hover {
-  color: #f8897b;
+  background-color: rgba(216, 78, 60, 0.8);
 }
 
 /* _____________________ */
