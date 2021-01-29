@@ -5,9 +5,9 @@ let button = document.querySelector("#swap");
 let mainWidth = document.querySelector(".main").offsetWidth;
 let mainHeight = document.querySelector(".main").offsetHeight;
 
-// console.log(mainWidth, mainHeight);
+// Animation of Currency Red Bubbles
 
-button.addEventListener("click", () => {
+function animateElems() {
   let collision = true;
 
   let attempts = 0;
@@ -53,7 +53,7 @@ button.addEventListener("click", () => {
       // console.log(distance, distance > itemWidth * 1.1, attempts);
     }
   }
-});
+}
 
 // Collision code
 
@@ -108,8 +108,13 @@ function calculate() {
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
 
-      amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
       amountEl_one.value = parseFloat(amountEl_one.value);
+
+      let numEl = (amountEl_one.value * rate).toFixed(2);
+
+      amountEl_two.value = new Intl.NumberFormat().format(numEl);
+
+      console.log();
     })
     .catch(function (error) {
       console.log(error);
@@ -118,10 +123,17 @@ function calculate() {
 
 // Event listeners
 
-currencyEl_one.addEventListener("change", calculate);
+currencyEl_one.addEventListener("change", () => {
+  calculate();
+  animateElems();
+});
+currencyEl_two.addEventListener("change", () => {
+  calculate();
+  animateElems();
+});
 amountEl_one.addEventListener("input", calculate);
-currencyEl_two.addEventListener("change", calculate);
 amountEl_two.addEventListener("input", calculate);
+button.addEventListener("click", animateElems);
 
 swap.addEventListener("click", () => {
   const temp = currencyEl_one.value;
