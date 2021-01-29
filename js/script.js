@@ -14,9 +14,9 @@ const currentTheme = localStorage.getItem("theme")
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
 
-  if (currentTheme === "warm-theme") {
-    // the below line should be fixed
-    switchTheme.checked = true;
+  if (currentTheme === "warm-theme" || "cold-theme") {
+    // the below line should
+    switchTheme();
   }
 }
 
